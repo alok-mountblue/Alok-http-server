@@ -9,7 +9,7 @@ const readFile = (file, res) => {
   fs.readFile(file, (err, data) => {
     if (err) {
       res.writeHead(404, { "Content-Type": "text/html" });
-      res.end("<h4>404 Not Found<h4>");
+      res.end("<h1>404 Not Found<h1>");
       return res;
     }
     res.write(data);
