@@ -13,12 +13,12 @@ app.get("/", (req, res) => {
 });
 
 app.get("/html", (req, res) => {
-  res.sendFile(__dirname + "/Data/first.html");
+  res.status(200).sendFile(__dirname + "/Data/first.html");
 });
 
 app.get("/json", (req, res) => {
   const path = __dirname + "/Data/first.json";
-  res.sendFile(path);
+  res.status(200).sendFile(path);
 });
 
 app.get("/uuid", (req, res) => {
